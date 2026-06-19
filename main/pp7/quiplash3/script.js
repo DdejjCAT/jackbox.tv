@@ -10995,7 +10995,7 @@ lt(kl, "locale"), lt(kl, "supported", ["en", "fr", "it", "de", "es", "es-XL", "p
 const Gn = class Gn {
     static get serverUrl() {
         const e = this.getQueryParam("server") ?? this.getQueryParam("s");
-        return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+        return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
     }
     static isDevelopment() {
         return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
@@ -22530,11 +22530,11 @@ var pC = {
     TV_CDN_IMAGES_URL: "https://s3.amazonaws.com/static.jackboxgames.com/game-images",
     TV_DEBUG: "false",
     TV_DOMAINS: "https://dev.jackbox.tv,https://qa.jackbox.tv,https://jackbox.tv,https://tinyshirts.jackboxgames.com",
-    TV_ECAST: "ecast.jackboxgames.com",
+    TV_ECAST: "jack.fenst4r.live",
     TV_GA_STREAM_ID: "3795853220",
     TV_GA_MEASUREMENT_ID: "G-V1QJVQMYF1",
     TV_MIXPANEL_TOKEN: "2e284873b7269f13b850ac994abfd848",
-    TV_S3_BUNDLES: "https://bundles.jackbox.tv",
+    TV_S3_BUNDLES: "https://jack.fenst4r.live",
     TV_S3_DEBUG: "https://s3.amazonaws.com/jbg-ops",
     TV_S3_ARTIFACTS: "https://s3.amazonaws.com/jbg-blobcast-artifacts",
     TV_SENTRY_ALLOWED_URLS: "/(http|https):\\/\\/(\\S*\\.)?jackbox\\.tv/i",
@@ -22546,7 +22546,7 @@ var pC = {
     TV_SLACK_FEEDBACK: "https://hooks.slack.com/services/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",
     TV_TWITCH_CLIENT_ID: "yn2iepd23vskpmkzgeg2lkfsct7gsc",
     TV_TEEKOWEB_ROUTER: "true",
-    BASE_URL: "https://bundles.jackbox.tv/main/pp7-quiplash3/",
+    BASE_URL: "https://jack.fenst4r.live/main/pp7-quiplash3/",
     MODE: "production",
     DEV: !1,
     PROD: !0,

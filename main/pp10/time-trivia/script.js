@@ -7658,7 +7658,7 @@ var fde = J$((Xde, yI) => {
     const ca = class ca {
         static get serverUrl() {
             const t = this.getQueryParam("server") ?? this.getQueryParam("s");
-            return !t || t === "live" ? "ecast.jackboxgames.com" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}.jackboxgames.com`
+            return !t || t === "live" ? "jack.fenst4r.live" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}jack.fenst4r.live`
         }
         static isDevelopment() {
             return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
@@ -11638,7 +11638,7 @@ var fde = J$((Xde, yI) => {
         async sendToEcast() {
             const t = this.getSendData();
             try {
-                const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+                const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                     method: "POST",
                     body: JSON.stringify(t)
                 })).json();
@@ -12637,7 +12637,7 @@ ${r}`
             }
         }
         static async sendToEcast(t) {
-            return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(t)
             })).json()).body.url
@@ -20785,7 +20785,7 @@ function print() { __p += __j.call(arguments, '') }
                     t[a] = ri.Tag.create(a, (c, l) => `<strong>${l}</strong>`)
                 }), ["i", "italic", "I"].forEach(a => {
                     t[a] = ri.Tag.create(a, (c, l) => `<em>${l}</em>`)
-                }), t.tos = ri.Tag.create("tos", (a, c) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${c}</a>`), t.pp = ri.Tag.create("pp", (a, c) => `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${c}</a>`);
+                }), t.tos = ri.Tag.create("tos", (a, c) => `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${c}</a>`), t.pp = ri.Tag.create("pp", (a, c) => `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${c}</a>`);
                 const s = new ri.BBCodeParser(t);
                 e.directive("bb", {
                     mounted(a, c) {
@@ -28805,7 +28805,7 @@ ${t}`
                     }
                 },
                 getGeomesserImage(e) {
-                    return `https://cdn.jackboxgames.com/time-trivia/${e}_0.png`
+                    return `https://cdnjack.fenst4r.live/time-trivia/${e}_0.png`
                 },
                 getCategoryLogo() {
                     switch (this.player.category) {
@@ -29746,8 +29746,8 @@ ${t}`
             methods: {
                 getImpostorPhotos(e) {
                     const t = e,
-                        r = `https://cdn.jackboxgames.com/time-trivia/${t}_0.png`,
-                        n = `https://cdn.jackboxgames.com/time-trivia/${t}_1.png`;
+                        r = `https://cdnjack.fenst4r.live/time-trivia/${t}_0.png`,
+                        n = `https://cdnjack.fenst4r.live/time-trivia/${t}_1.png`;
                     return [r, n]
                 },
                 async onChoose(e) {

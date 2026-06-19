@@ -7655,7 +7655,7 @@ var Wo;
 let js = (Wo = class {
     static get serverUrl() {
         const e = this.getQueryParam("server") ?? this.getQueryParam("s");
-        return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+        return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}jack.fenst4r.live`
     }
     static isDevelopment() {
         return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
@@ -11633,7 +11633,7 @@ class jX {
     async sendToEcast() {
         const e = this.getSendData();
         try {
-            const r = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            const r = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(e)
             })).json();
@@ -12632,7 +12632,7 @@ class bS {
         }
     }
     static async sendToEcast(e) {
-        return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+        return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
             method: "POST",
             body: JSON.stringify(e)
         })).json()).body.url
@@ -20767,7 +20767,7 @@ const Qoe = {
             e[i] = Qi.Tag.create(i, (o, a) => `<strong>${a}</strong>`)
         }), ["i", "italic", "I"].forEach(i => {
             e[i] = Qi.Tag.create(i, (o, a) => `<em>${a}</em>`)
-        }), e.tos = Qi.Tag.create("tos", (i, o) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${o}</a>`), e.pp = Qi.Tag.create("pp", (i, o) => `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${o}</a>`);
+        }), e.tos = Qi.Tag.create("tos", (i, o) => `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${o}</a>`), e.pp = Qi.Tag.create("pp", (i, o) => `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${o}</a>`);
         const s = new Qi.BBCodeParser(e);
         t.directive("bb", {
             mounted(i, o) {
@@ -29183,7 +29183,7 @@ const s_e = {
     },
     Zye = "modulepreload",
     Xye = function(t) {
-        return "https://bundles.jackbox.tv/main/pp10-nopus-opus/" + t
+        return "https://jack.fenst4r.live/main/pp10-nopus-opus/" + t
     },
     ww = {},
     Qye = function(e, n, r) {
@@ -45130,7 +45130,7 @@ const ywe = st({
         instrument: {
             handler(t, e) {
                 e && t.config.slug === e.config.slug || (this.instraface.update({
-                    baseUrl: `https://cdn.jackboxgames.com/nopus-opus/instruments/${this.instrument.config.slug}`,
+                    baseUrl: `https://cdnjack.fenst4r.live/nopus-opus/instruments/${this.instrument.config.slug}`,
                     config: this.instrument.config
                 }), this.instraface.outNode.volume.value = 8, this.waitForLoading())
             },
@@ -45358,7 +45358,7 @@ const Owe = st({
             handler(t, e) {
                 if (!(e && t.config.slug === e.config.slug)) {
                     this.instraface.update({
-                        baseUrl: `https://cdn.jackboxgames.com/nopus-opus/instruments/${this.instrument.config.slug}`,
+                        baseUrl: `https://cdnjack.fenst4r.live/nopus-opus/instruments/${this.instrument.config.slug}`,
                         config: this.instrument.config
                     }), this.instraface.outNode.volume.value = 8, this.down = [];
                     for (let n = 0; n < this.beatmap.config.laneCount; n++) this.down.push(!1);
@@ -46368,7 +46368,7 @@ class pI {
         ye(this, "responseKey");
         ye(this, "wsClient");
         this.criteria = e.criteria, this.difficulty = e.beatmap.difficulty, this.duration = e.duration, this.guide = e.guide, this.isAudience = e.isAudience, this.missThreshold = e.criteria.time[e.criteria.time.length - 1], this.noteQualityScoreFactors = e.noteQualityScoreFactors, this.scorePerHighestCombo = e.scorePerHighestCombo, this.scorePoolPerDifficulty = e.scorePoolPerDifficulty, this.successPercentage = e.successPercentage, this.minimumDisplayCombo = e.minimumDisplayCombo, this.currentTime = e.offset ?? 0, this.responseKey = e.responseKey, this.wsClient = e.wsClient;
-        const n = `https://cdn.jackboxgames.com/nopus-opus/instruments/${e.instrument.slug}`;
+        const n = `https://cdnjack.fenst4r.live/nopus-opus/instruments/${e.instrument.slug}`;
         this.instraface = new Bb({
             baseUrl: n,
             config: e.instrument

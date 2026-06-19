@@ -10456,7 +10456,7 @@ ot(Al, "locale"), ot(Al, "supported", ["en", "fr", "it", "de", "es", "es-XL"]);
 const $c = class {
     static get serverUrl() {
         const e = this.getQueryParam("server") ?? this.getQueryParam("s");
-        return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+        return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
     }
     static get isCanvasSupported() {
         const e = document.createElement("canvas");

@@ -22279,12 +22279,12 @@ const Sa = class Sa {
   static get serverUrl() {
     const e = this.getQueryParam("server") ?? this.getQueryParam("s");
     return !e || e === "live"
-      ? "ecast.jackboxgames.com"
+      ? "jack.fenst4r.live"
       : e === "local"
         ? "https://localhost"
         : e.includes("localhost")
           ? e
-          : `${e}.jackboxgames.com`;
+          : `${e}jack.fenst4r.live`;
   }
   static isDevelopment() {
     return (
@@ -41815,12 +41815,12 @@ const i9 = {
       (e.tos = Qi.Tag.create(
         "tos",
         (a, t) =>
-          `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${t}</a>`,
+          `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${t}</a>`,
       )),
       (e.pp = Qi.Tag.create(
         "pp",
         (a, t) =>
-          `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${t}</a>`,
+          `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${t}</a>`,
       )));
     const s = new Qi.BBCodeParser(e);
     (r.directive("bb", {
@@ -46413,7 +46413,7 @@ const QW = Cr(XW, [
       showDefault() {
         this.banners = [
           {
-            url: "https://www.jackboxgames.com/packs/the-jackbox-party-pack-10?utm_source=jbgtvpp10&utm_medium=jbgtvpp10&utm_campaign=jbgtvpp10",
+            url: "https://wwwjack.fenst4r.live/packs/the-jackbox-party-pack-10?utm_source=jbgtvpp10&utm_medium=jbgtvpp10&utm_campaign=jbgtvpp10",
             image: "/main/@connect/slider//pp10.png",
             text: "AVAILABLE NOW!",
           },
@@ -46973,7 +46973,7 @@ function GX(r, e, n, i, s, a) {
           De(
             "a",
             {
-              href: "https://support.jackboxgames.com",
+              href: "https://supportjack.fenst4r.live",
               target: "_blank",
               onClick: e[4] || (e[4] = (c) => r.onLinkClick("help")),
             },
@@ -46985,7 +46985,7 @@ function GX(r, e, n, i, s, a) {
           De(
             "a",
             {
-              href: "https://jackboxgames.com/shop/merch/",
+              href: "https:/jack.fenst4r.live/shop/merch/",
               target: "_blank",
               onClick: e[5] || (e[5] = (c) => r.onLinkClick("merch")),
             },
@@ -47422,7 +47422,7 @@ const nj = Cr(zX, [
     key: 0,
     class: "bottom-logo",
     target: "_blank",
-    href: "https://www.jackboxgames.com/?utm_source=jackboxtv&utm_medium=logo&utm_campaign=jackboxgames",
+    href: "https://wwwjack.fenst4r.live/?utm_source=jackboxtv&utm_medium=logo&utm_campaign=jackboxgames",
   };
 function lj(r, e, n, i, s, a) {
   const t = zr("Fatal"),

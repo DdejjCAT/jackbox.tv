@@ -7053,7 +7053,7 @@ var $oe = Dk((Aoe, n1) => {
         static get serverUrl() {
             var r;
             const t = (r = this.getQueryParam("server")) != null ? r : this.getQueryParam("s");
-            return !t || t === "live" ? "ecast.jackboxgames.com" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}.jackboxgames.com`
+            return !t || t === "live" ? "jack.fenst4r.live" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}jack.fenst4r.live`
         }
         static get isCanvasSupported() {
             const t = document.createElement("canvas");
@@ -11155,7 +11155,7 @@ var $oe = Dk((Aoe, n1) => {
         async sendToEcast() {
             const t = this.getSendData();
             try {
-                const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+                const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                     method: "POST",
                     body: JSON.stringify(t)
                 })).json();
@@ -12634,7 +12634,7 @@ ${r}`,
             }
         }
         static async sendToEcast(t) {
-            return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(t)
             })).json()).body.url
@@ -12645,21 +12645,21 @@ ${r}`,
                 s = {
                     TV_ADROLL_ADVERTISABLE_ID: "WN335VM7RVAMPDZAOWMIHP",
                     TV_ADROLL_PIXEL_ID: "WN335VM7RVAMPDZAOWMIHP",
-                    TV_CDN_IMAGES_URL: "https://s3.amazonaws.com/static.jackboxgames.com/game-images",
+                    TV_CDN_IMAGES_URL: "https://s3.amazonaws.com/staticjack.fenst4r.live/game-images",
                     TV_DEBUG: "false",
-                    TV_DOMAINS: "https://dev.jackbox.tv,https://qa.jackbox.tv,https://jackbox.tv,https://tinyshirts.jackboxgames.com",
-                    TV_ECAST: "ecast.jackboxgames.com",
+                    TV_DOMAINS: "https://dev.jackbox.tv,https://qa.jackbox.tv,https://jackbox.tv,https://tinyshirtsjack.fenst4r.live",
+                    TV_ECAST: "jack.fenst4r.live",
                     TV_GA_STREAM_ID: "3795853220",
                     TV_GA_MEASUREMENT_ID: "G-V1QJVQMYF1",
                     TV_MIXPANEL_TOKEN: "2e284873b7269f13b850ac994abfd848",
-                    TV_S3_BUNDLES: "https://bundles.jackbox.tv",
+                    TV_S3_BUNDLES: "https://jack.fenst4r.live",
                     TV_S3_DEBUG: "https://jbg-ops.s3.amazonaws.com",
                     TV_SENTRY_ALLOWED_URLS: "/(http|https):\\/\\/(\\S*\\.)?jackbox\\.tv/i",
                     TV_SENTRY_DSN: "https://bb026273d98c4b99ab11c1de369f521f@o420318.ingest.sentry.io/6387933",
                     TV_SENTRY_RATE: "0.2",
                     TV_SLACK_DEBUG: "https://hooks.slack.com/services/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",
                     TV_TWITCH_CLIENT_ID: "yn2iepd23vskpmkzgeg2lkfsct7gsc",
-                    BASE_URL: "https://bundles.jackbox.tv/main/pp9-antique-freak/",
+                    BASE_URL: "https://jack.fenst4r.live/main/pp9-antique-freak/",
                     MODE: "production",
                     DEV: !1,
                     PROD: !0
@@ -27706,7 +27706,7 @@ ${t}`
             if (!e) return "";
             const t = e.id.split("_")[0],
                 r = (n = e.type) != null ? n : "png";
-            return `https://s3.amazonaws.com/static.jackboxgames.com/game-images/antique-game/${t}.${r}`
+            return `https://s3.amazonaws.com/staticjack.fenst4r.live/game-images/antique-game/${t}.${r}`
         },
         Tie = st({
             components: {

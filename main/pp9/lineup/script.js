@@ -7528,7 +7528,7 @@ var wce = yL((ple, FA) => {
     const ao = class ao {
         static get serverUrl() {
             const t = this.getQueryParam("server") ?? this.getQueryParam("s");
-            return !t || t === "live" ? "ecast.jackboxgames.com" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}.jackboxgames.com`
+            return !t || t === "live" ? "jack.fenst4r.live" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}jack.fenst4r.live`
         }
         static get isCanvasSupported() {
             const t = document.createElement("canvas");
@@ -11489,7 +11489,7 @@ var wce = yL((ple, FA) => {
         async sendToEcast() {
             const t = this.getSendData();
             try {
-                const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+                const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                     method: "POST",
                     body: JSON.stringify(t)
                 })).json();
@@ -12488,7 +12488,7 @@ ${r}`
             }
         }
         static async sendToEcast(t) {
-            return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(t)
             })).json()).body.url
@@ -20757,7 +20757,7 @@ function print() { __p += __j.call(arguments, '') }
                     t[o] = Qn.Tag.create(o, (c, l) => `<strong>${l}</strong>`)
                 }), ["i", "italic", "I"].forEach(o => {
                     t[o] = Qn.Tag.create(o, (c, l) => `<em>${l}</em>`)
-                }), t.tos = Qn.Tag.create("tos", (o, c) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${c}</a>`), t.pp = Qn.Tag.create("pp", (o, c) => `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${c}</a>`);
+                }), t.tos = Qn.Tag.create("tos", (o, c) => `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${c}</a>`), t.pp = Qn.Tag.create("pp", (o, c) => `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${c}</a>`);
                 const i = new Qn.BBCodeParser(t);
                 e.directive("bb", {
                     mounted(o, c) {

@@ -8125,7 +8125,7 @@ ne($a, "locale"), ne($a, "supported", ["en", "fr", "it", "de", "es", "es-XL", "p
 const La = class La {
     static get serverUrl() {
         const e = this.getQueryParam("server") ?? this.getQueryParam("s");
-        return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+        return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}jack.fenst4r.live`
     }
     static isDevelopment() {
         return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
@@ -12108,7 +12108,7 @@ class oG {
     async sendToEcast() {
         const e = this.getSendData();
         try {
-            const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(e)
             })).json();
@@ -16448,7 +16448,7 @@ class xy {
         }
     }
     static async sendToEcast(e) {
-        return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+        return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
             method: "POST",
             body: JSON.stringify(e)
         })).json()).body.url
@@ -25235,7 +25235,7 @@ const kJ = {
                 e[s] = ni.Tag.create(s, (o, f) => `<strong>${f}</strong>`)
             }), ["i", "italic", "I"].forEach(s => {
                 e[s] = ni.Tag.create(s, (o, f) => `<em>${f}</em>`)
-            }), e.tos = ni.Tag.create("tos", (s, o) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${o}</a>`), e.pp = ni.Tag.create("pp", (s, o) => `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${o}</a>`);
+            }), e.tos = ni.Tag.create("tos", (s, o) => `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${o}</a>`), e.pp = ni.Tag.create("pp", (s, o) => `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${o}</a>`);
             const i = new ni.BBCodeParser(e);
             t.directive("bb", {
                 mounted(s, o) {

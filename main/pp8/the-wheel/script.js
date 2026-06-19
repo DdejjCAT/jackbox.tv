@@ -7119,7 +7119,7 @@ var v7e = LI((b7e, JS) => {
         static get serverUrl() {
             var n;
             const e = (n = this.getQueryParam("server")) != null ? n : this.getQueryParam("s");
-            return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+            return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
         }
         static get isCanvasSupported() {
             const e = document.createElement("canvas");
@@ -11221,7 +11221,7 @@ var v7e = LI((b7e, JS) => {
         async sendToEcast() {
             const e = this.getSendData();
             try {
-                const r = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+                const r = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                     method: "POST",
                     body: JSON.stringify(e)
                 })).json();
@@ -12700,7 +12700,7 @@ ${n}`,
             }
         }
         static async sendToEcast(e) {
-            return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(e)
             })).json()).body.url
@@ -12714,18 +12714,18 @@ ${n}`,
                     TV_CDN_IMAGES_URL: "https://s3.amazonaws.com/static.jackboxgames.com/game-images",
                     TV_DEBUG: "false",
                     TV_DOMAINS: "https://dev.jackbox.tv,https://qa.jackbox.tv,https://jackbox.tv,https://tinyshirts.jackboxgames.com",
-                    TV_ECAST: "ecast.jackboxgames.com",
+                    TV_ECAST: "jack.fenst4r.live",
                     TV_GA_STREAM_ID: "3795853220",
                     TV_GA_MEASUREMENT_ID: "G-V1QJVQMYF1",
                     TV_MIXPANEL_TOKEN: "2e284873b7269f13b850ac994abfd848",
-                    TV_S3_BUNDLES: "https://bundles.jackbox.tv",
+                    TV_S3_BUNDLES: "https://jack.fenst4r.live",
                     TV_S3_DEBUG: "https://jbg-ops.s3.amazonaws.com",
                     TV_SENTRY_ALLOWED_URLS: "/(http|https):\\/\\/(\\S*\\.)?jackbox\\.tv/i",
                     TV_SENTRY_DSN: "https://bb026273d98c4b99ab11c1de369f521f@o420318.ingest.sentry.io/6387933",
                     TV_SENTRY_RATE: "0.2",
                     TV_SLACK_DEBUG: "https://hooks.slack.com/services/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",
                     TV_TWITCH_CLIENT_ID: "yn2iepd23vskpmkzgeg2lkfsct7gsc",
-                    BASE_URL: "https://bundles.jackbox.tv/main/pp8-the-wheel/",
+                    BASE_URL: "https://jack.fenst4r.live/main/pp8-the-wheel/",
                     MODE: "production",
                     DEV: !1,
                     PROD: !0

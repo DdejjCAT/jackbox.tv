@@ -7253,7 +7253,7 @@ var lae = cP((zae, A1) => {
     const so = class so {
         static get serverUrl() {
             const t = this.getQueryParam("server") ?? this.getQueryParam("s");
-            return !t || t === "live" ? "ecast.jackboxgames.com" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}.jackboxgames.com`
+            return !t || t === "live" ? "jack.fenst4r.live" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}.jackboxgames.com`
         }
         static get isCanvasSupported() {
             const t = document.createElement("canvas");
@@ -11577,7 +11577,7 @@ var lae = cP((zae, A1) => {
         async sendToEcast() {
             const t = this.getSendData();
             try {
-                const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+                const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                     method: "POST",
                     body: JSON.stringify(t)
                 })).json();
@@ -12945,7 +12945,7 @@ ${r}`
             }
         }
         static async sendToEcast(t) {
-            return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(t)
             })).json()).body.url

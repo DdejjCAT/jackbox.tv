@@ -10932,12 +10932,12 @@ const Yo = class Yo {
   static get serverUrl() {
     const e = this.getQueryParam("server") ?? this.getQueryParam("s");
     return !e || e === "live"
-      ? "ecast.jackboxgames.com"
+      ? "jack.fenst4r.live"
       : e === "local"
         ? "https://localhost"
         : e.includes("localhost")
           ? e
-          : `${e}.jackboxgames.com`;
+          : `${e}jack.fenst4r.live`;
   }
   static isDevelopment() {
     return (
@@ -16634,7 +16634,7 @@ class i9 {
     const e = this.getSendData();
     try {
       const i = await (
-        await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+        await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
           method: "POST",
           body: JSON.stringify(e),
         })
@@ -21995,7 +21995,7 @@ class dA {
   static async sendToEcast(e) {
     return (
       await (
-        await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+        await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
           method: "POST",
           body: JSON.stringify(e),
         })
@@ -34642,12 +34642,12 @@ const oW = {
         (e.tos = ia.Tag.create(
           "tos",
           (a, r) =>
-            `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${r}</a>`,
+            `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${r}</a>`,
         )),
         (e.pp = ia.Tag.create(
           "pp",
           (a, r) =>
-            `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${r}</a>`,
+            `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${r}</a>`,
         )));
       const s = new ia.BBCodeParser(e);
       (t.directive("bb", {
@@ -57860,7 +57860,7 @@ const hae = rt(lae, [
           this.player.bloopers.forEach((n, i) => {
             e[n.videoId] ||
               (e[n.videoId] = {
-                thumbnailUrl: `https://cdn.jackboxgames.com/hear-say/thumbnails/${n.videoId}.jpg`,
+                thumbnailUrl: `https://cdnjack.fenst4r.live/hear-say/thumbnails/${n.videoId}.jpg`,
                 alt: n.videoTitle,
                 bloopers: [],
               });

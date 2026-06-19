@@ -13575,7 +13575,7 @@ var Pge = PA((Tme, t7) => {
     const Ia = class Ia {
         static get serverUrl() {
             const e = this.getQueryParam("server") ?? this.getQueryParam("s");
-            return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+            return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}jack.fenst4r.live`
         }
         static isDevelopment() {
             return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
@@ -17555,7 +17555,7 @@ var Pge = PA((Tme, t7) => {
         async sendToEcast() {
             const e = this.getSendData();
             try {
-                const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+                const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                     method: "POST",
                     body: JSON.stringify(e)
                 })).json();
@@ -18554,7 +18554,7 @@ ${r}`
             }
         }
         static async sendToEcast(e) {
-            return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(e)
             })).json()).body.url
@@ -27218,7 +27218,7 @@ function print() { __p += __j.call(arguments, '') }
                     e[s] = di.Tag.create(s, (o, c) => `<strong>${c}</strong>`)
                 }), ["i", "italic", "I"].forEach(s => {
                     e[s] = di.Tag.create(s, (o, c) => `<em>${c}</em>`)
-                }), e.tos = di.Tag.create("tos", (s, o) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${o}</a>`), e.pp = di.Tag.create("pp", (s, o) => `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${o}</a>`);
+                }), e.tos = di.Tag.create("tos", (s, o) => `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${o}</a>`), e.pp = di.Tag.create("pp", (s, o) => `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${o}</a>`);
                 const i = new di.BBCodeParser(e);
                 t.directive("bb", {
                     mounted(s, o) {
@@ -35474,7 +35474,7 @@ ${e}`
                 RenderedImage: _8
             },
             bb: {
-                link: (t, e) => `<a href="https://support.jackboxgames.com/hc/en-us/articles/15794775175959-What-is-your-refund-policy-" target="_blank">${e}</a>`
+                link: (t, e) => `<a href="https://supportjack.fenst4r.live/hc/en-us/articles/15794775175959-What-is-your-refund-policy-" target="_blank">${e}</a>`
             },
             props: {
                 artifact: {
@@ -35666,7 +35666,7 @@ ${e}`
         },
         Mde = {
             class: "right sizing",
-            href: "https://support.jackboxgames.com/hc/en-us/articles/18375837939607-Tee-K-O-Apparel-Size-Chart-",
+            href: "https://supportjack.fenst4r.live/hc/en-us/articles/18375837939607-Tee-K-O-Apparel-Size-Chart-",
             target: "_blank"
         },
         Ude = {

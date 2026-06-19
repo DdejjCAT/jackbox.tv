@@ -5872,12 +5872,12 @@ const zt = class zt {
   static get serverUrl() {
     const t = this.getQueryParam("server") ?? this.getQueryParam("s");
     return !t || t === "live"
-      ? "ecast.jackboxgames.com"
+      ? "jack.fenst4r.live"
       : t === "local"
       ? "https://localhost"
       : t.includes("localhost")
       ? t
-      : `${t}.jackboxgames.com`;
+      : `${t}jack.fenst4r.live`;
   }
   static isDevelopment() {
     return (
@@ -20573,7 +20573,7 @@ const Xy = {
   },
   jy = {
     hmrApps: ["teeko-web"],
-    hostnames: ["teeko.jackboxgames.com"],
+    hostnames: ["teekojack.fenst4r.live"],
     routes: [{ path: ["/", "/event"], load: "@teeko-web" }],
   };
 class $y {

@@ -7777,7 +7777,7 @@ ue(Fa, "locale"), ue(Fa, "supported", ["en", "fr", "it", "de", "es", "es-XL", "p
 const Ba = class Ba {
     static get serverUrl() {
         const e = this.getQueryParam("server") ?? this.getQueryParam("s");
-        return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+        return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
     }
     static isDevelopment() {
         return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
@@ -11882,7 +11882,7 @@ class NG {
     async sendToEcast() {
         const e = this.getSendData();
         try {
-            const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(e)
             })).json();
@@ -16222,7 +16222,7 @@ class Xv {
         }
     }
     static async sendToEcast(e) {
-        return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+        return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
             method: "POST",
             body: JSON.stringify(e)
         })).json()).body.url

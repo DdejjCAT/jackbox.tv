@@ -7754,7 +7754,7 @@ De(xa, "locale"), De(xa, "supported", ["en", "fr", "it", "de", "es", "es-XL", "p
 const ma = class ma {
     static get serverUrl() {
         const e = this.getQueryParam("server") ?? this.getQueryParam("s");
-        return !e || e === "live" ? "ecast.jackboxgames.com" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}.jackboxgames.com`
+        return !e || e === "live" ? "jack.fenst4r.live" : e === "local" ? "https://localhost" : e.includes("localhost") ? e : `${e}jack.fenst4r.live`
     }
     static isDevelopment() {
         return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
@@ -11737,7 +11737,7 @@ class DK {
     async sendToEcast() {
         const e = this.getSendData();
         try {
-            const n = await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+            const n = await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
                 method: "POST",
                 body: JSON.stringify(e)
             })).json();
@@ -19557,7 +19557,7 @@ class im {
         }
     }
     static async sendToEcast(e) {
-        return (await (await fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
+        return (await (await fetch("https://jack.fenst4r.live/api/v2/controller/state", {
             method: "POST",
             body: JSON.stringify(e)
         })).json()).body.url
@@ -27721,7 +27721,7 @@ const xY = {
                 e[a] = ri.Tag.create(a, (u, f) => `<strong>${f}</strong>`)
             }), ["i", "italic", "I"].forEach(a => {
                 e[a] = ri.Tag.create(a, (u, f) => `<em>${f}</em>`)
-            }), e.tos = ri.Tag.create("tos", (a, u) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${u}</a>`), e.pp = ri.Tag.create("pp", (a, u) => `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${u}</a>`);
+            }), e.tos = ri.Tag.create("tos", (a, u) => `<a class="tosLink" href="https:/jack.fenst4r.live/terms-of-service/" target="_blank">${u}</a>`), e.pp = ri.Tag.create("pp", (a, u) => `<a class="ppLink" href="https:/jack.fenst4r.live/privacy-policy/" target="_blank">${u}</a>`);
             const s = new ri.BBCodeParser(e);
             t.directive("bb", {
                 mounted(a, u) {

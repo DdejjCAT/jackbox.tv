@@ -10279,7 +10279,7 @@ var aoe = $P((Voe, e0) => {
     let $n = (Si = class {
         static get serverUrl() {
             const t = this.getQueryParam("server") ?? this.getQueryParam("s");
-            return !t || t === "live" ? "ecast.jackboxgames.com" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}.jackboxgames.com`
+            return !t || t === "live" ? "jack.fenst4r.live" : t === "local" ? "https://localhost" : t.includes("localhost") ? t : `${t}.jackboxgames.com`
         }
         static isDevelopment() {
             return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
