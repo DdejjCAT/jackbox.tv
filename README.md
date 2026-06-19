@@ -16,9 +16,7 @@ cd jackbox.tv
 ### 2. Замените домен на свой
 
 Редачьте
-main/@moderator/C9ujNxqs.js
-CNIlMMVr.js
-script-0.js
+main/@moderator/C9ujNxqs.js; CNIlMMVr.js; script-0.js
 
 ### 3. Настройте веб-сервер
 
