@@ -37,5 +37,4 @@ sudo certbot --nginx -d ВАШ ДОМЕН СЕРВЕРА
 ## 🙏 Благодарности
 
 - **Основа проекта:** [wheatleyinspace](https://github.com/wheatleyinspace)
-- **Moderate:** вручную скопировано и адаптировано
-```
+- **Moderate:** вручную скопировано и адаптировано [DdejjCAT](https://github.com/DdejjCAT)
