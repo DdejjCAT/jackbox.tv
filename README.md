@@ -11,6 +11,7 @@
 ```bash
 git clone https://github.com/DdejjCAT/jackbox.tv.git
 cd jackbox.tv
+```
 
 ### 2. Замените домен на свой
 
